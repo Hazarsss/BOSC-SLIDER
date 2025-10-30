@@ -42,18 +42,6 @@ function BoshPages() {
       img: import.meta.env.BASE_URL + "/popupImg/camera.png",
     },
     {
-      className: "btn-steering",
-      label: "Steering System",
-      title: "Smart Steering System",
-      desc: "Kontrol kemudi presisi dengan bantuan elektronik.",
-    },
-    {
-      className: "btn-ecomputer",
-      label: "E-Computer",
-      title: "Engine Control Unit (ECU)",
-      desc: "Otak dari sistem kendaraan yang mengatur performa mesin.",
-    },
-    {
       className: "btn-airbag",
       label: "Airbag",
       title: "Safety Airbag",
@@ -131,7 +119,7 @@ function BoshPages() {
                 className="btn-card outline px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
                 onClick={handleClose}
               >
-                EXPLORE
+                BACK
               </button>
             </div>
           </div>
