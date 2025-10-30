@@ -3,7 +3,7 @@ import BoschRoutes from "./components/BoschRoutes";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/BOSCH-SLIDER/">
       <BoschRoutes />
     </Router>
   );
