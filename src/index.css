@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  overflow-x: visible;
+  overflow-y: hidden;
+}
+
+.bosch-bg {
+  position: relative;
+  background: url("/car/wireframe.png") no-repeat center center;
+  background-color: black;
+  background-size: contain;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-scroll-bg {
+  width: 5500px;
+  height: 100vh;
+  background: url("/car/wireframe.png") no-repeat left center;
+  background-size: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*---------------------------------------button*/
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.btn-converter {
+  bottom: 55vh;
+  right: 70vw;
+}
+
+.btn-coolingFan {
+  bottom: 51vh;
+  right: 80vw;
+}
+
+.btn-radarSensor {
+  bottom: 40vh;
+  right: 85vw;
+}
+
+.btn-breakingSystem {
+  bottom: 40vh;
+  right: 60vw;
+}
+
+.btn-camera {
+  bottom: 65vh;
+  right: 55vw;
+}
+
+.btn-steering {
+  bottom: 55vh;
+  right: 55vw;
+}
+
+.btn-ecomputer {
+  bottom: 60vh;
+  right: 45vw;
+}
+
+.btn-airbag {
+  bottom: 50vh;
+  right: 45vw;
+}
+
+.btn-battery {
+  bottom: 40vh;
+  right: 45vw;
+}
+
+.btn-eaxde {
+  bottom: 50vh;
+  right: 30vw;
+}
+
+.btn-ultrasonic {
+  bottom: 40vh;
+  right: 13vw;
+}
+
+.neon-pulse {
+  background: #ffffff00;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  overflow: visible;
+}
+
+.neon-pulse::before,
+.neon-pulse::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid #0ff;
+  border-radius: inherit;
+  animation: pulseOut 2s ease-out infinite;
+  opacity: 0;
+}
+
+.neon-pulse::after {
+  animation-delay: 1s;
+}
+
+@keyframes pulseOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+/*---------------------------------------button*/
