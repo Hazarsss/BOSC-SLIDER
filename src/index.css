@@ -98,9 +98,10 @@ body {
   right: 13vw;
 }
 
+/* Base class untuk semua neon pulse */
 .neon-pulse {
-  background: #ffffff00;
-  border: 2px solid #0ff;
+  background: transparent;
+  border: 2px solid var(--neon-color);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
   overflow: visible;
 }
@@ -110,7 +111,7 @@ body {
   content: "";
   position: absolute;
   inset: -4px;
-  border: 2px solid #0ff;
+  border: 2px solid var(--neon-color);
   border-radius: inherit;
   animation: pulseOut 2s ease-out infinite;
   opacity: 0;
@@ -118,6 +119,22 @@ body {
 
 .neon-pulse::after {
   animation-delay: 1s;
+}
+
+/* Variasi warna */
+.neon-pulse-adas {
+  --neon-color: #8a2be2; /* ungu neon berkilau */
+  background: linear-gradient(145deg, #4b1b4b7e, #892be244);
+}
+
+.neon-pulse-energy {
+  --neon-color: #17b464; /* hijau terang */
+  background: linear-gradient(145deg, #104d2d5d, #00ff8048);
+}
+
+.neon-pulse-motion {
+  --neon-color: #146964;
+  background: linear-gradient(145deg, #0a3b3a5d, #00ff8048);
 }
 
 @keyframes pulseOut {

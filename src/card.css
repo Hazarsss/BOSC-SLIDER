@@ -5,7 +5,6 @@
 .container {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.25);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 38px;
@@ -17,6 +16,17 @@
   text-align: center;
   aspect-ratio: 9/16;
   width: 30%;
+}
+.container-energy {
+  background-color: rgba(39, 106, 63, 0.61);
+}
+
+.container-adas {
+  background-color: rgba(89, 37, 88, 0.61);
+}
+
+.container-motion {
+  background-color: rgba(20, 105, 99, 0.61);
 }
 
 .wrapper {

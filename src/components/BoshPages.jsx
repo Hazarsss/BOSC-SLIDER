@@ -12,6 +12,8 @@ function BoshPages() {
       title: "Electric Power Converter",
       desc: "Mengubah arus listrik sesuai kebutuhan sistem kendaraan listrik.",
       img: import.meta.env.BASE_URL + "/popupImg/converter.png",
+      neon: "neon-pulse-energy",
+      container: "container-energy",
     },
     {
       className: "btn-coolingFan",
@@ -19,6 +21,8 @@ function BoshPages() {
       title: "Cooling Fan System",
       desc: "Menjaga suhu mesin dan sistem elektronik tetap optimal.",
       img: import.meta.env.BASE_URL + "/popupImg/coolingfan.png",
+      neon: "neon-pulse-energy",
+      container: "container-energy",
     },
     {
       className: "btn-radarSensor",
@@ -26,6 +30,8 @@ function BoshPages() {
       title: "Radar Sensor",
       desc: "Mendeteksi objek di sekitar kendaraan untuk sistem keselamatan.",
       img: import.meta.env.BASE_URL + "/popupImg/radar.png",
+      neon: "neon-pulse-adas",
+      container: "container-adas",
     },
     {
       className: "btn-breakingSystem",
@@ -33,6 +39,8 @@ function BoshPages() {
       title: "Advanced Braking System",
       desc: "Menjamin pengereman halus dan aman dengan kontrol elektronik.",
       img: import.meta.env.BASE_URL + "/popupImg/breake.png",
+      neon: "neon-pulse-motion",
+      container: "container-motion",
     },
     {
       className: "btn-camera",
@@ -40,6 +48,8 @@ function BoshPages() {
       title: " Multi purpose camera",
       desc: "Combines artificial intelligence methods with classic image processing algorithms",
       img: import.meta.env.BASE_URL + "/popupImg/camera.png",
+      neon: "neon-pulse-adas",
+      container: "container-adas",
     },
     {
       className: "btn-airbag",
@@ -47,6 +57,8 @@ function BoshPages() {
       title: "Safety Airbag",
       desc: "Perlindungan utama saat terjadi benturan.",
       img: import.meta.env.BASE_URL + "/popupImg/airbag.png",
+      neon: "neon-pulse-motion",
+      container: "container-motion",
     },
     {
       className: "btn-battery",
@@ -54,6 +66,8 @@ function BoshPages() {
       title: "Lithium-ion Battery",
       desc: "Menyimpan energi untuk seluruh sistem kendaraan listrik.",
       img: import.meta.env.BASE_URL + "/popupImg/battery.png",
+      neon: "neon-pulse-energy",
+      container: "container-energy",
     },
     {
       className: "btn-eaxde",
@@ -61,6 +75,8 @@ function BoshPages() {
       title: "Electric Axle Drive",
       desc: "Menggerakkan roda dengan efisiensi tinggi dan torsi besar.",
       img: import.meta.env.BASE_URL + "/popupImg/eAxle.png",
+      neon: "neon-pulse-energy",
+      container: "container-energy",
     },
     {
       className: "btn-ultrasonic",
@@ -68,6 +84,8 @@ function BoshPages() {
       title: "Ultrasonic Sensor",
       desc: "Mendeteksi jarak objek terdekat untuk membantu parkir.",
       img: import.meta.env.BASE_URL + "/popupImg/ultrasonicsensor.png",
+      neon: "neon-pulse-adas",
+      container: "container-adas",
     },
   ];
 
@@ -93,7 +111,7 @@ function BoshPages() {
         buttons.map((btn, i) => (
           <div key={i} className={`absolute  flex flex-col items-center`}>
             <button
-              className={`btn ${btn.className} neon-pulse`}
+              className={`btn ${btn.className} neon-pulse ${btn.neon}`}
               onClick={() => handleOpen(btn)}
             ></button>
           </div>
@@ -101,7 +119,7 @@ function BoshPages() {
 
       {/* Popup Card */}
       {showPopup && (
-        <div className="container">
+        <div className={`container ${activePopup.container}`}>
           <div
             className={` bg-white rounded-xl shadow-xl p-6 w-[320px] text-center ${
               animateOut ? "animate-popupOut" : "animate-popupIn"
