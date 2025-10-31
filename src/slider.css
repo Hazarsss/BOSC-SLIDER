@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-scroll-bg {
+  width: 5500px;
+  height: 100vh;
+  background: url("/car/wireframe.png") no-repeat center center;
+  background-size: 100%;
+}
+
+/*---------------------------------------button*/
+
+.btn-slider-radarSensor {
+  bottom: 38vh;
+  right: 35vw;
+}
+
+.btn-slider-coolingFan {
+  bottom: 51vh;
+  right: 30vw;
+}
+
+.btn-slider-converter {
+  bottom: 65vh;
+  right: -30vw;
+}
+
+.btn-slider-breakingSystem {
+  bottom: 40vh;
+  right: -70vw;
+}
+
+.btn-slider-camera {
+  bottom: 90vh;
+  right: -130vw;
+}
+
+.btn-slider-airbag {
+  bottom: 60vh;
+  right: -170vw;
+}
+
+.btn-slider-battery {
+  bottom: 40vh;
+  right: -170vw;
+}
+
+.btn-slider-eaxde {
+  bottom: 60vh;
+  right: -280vw;
+}
+
+.btn-slider-ultrasonic {
+  bottom: 40vh;
+  right: -340vw;
+}
